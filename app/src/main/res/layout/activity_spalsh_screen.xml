@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".SpalshScreen">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bgmain_spalsh"
+        android:scaleType="fitXY"
+        android:contentDescription="@null" />
+
+<!--    Grup konten splash-->
+    <LinearLayout
+        android:id="@+id/splashContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logos"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tvlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/pjkt_ebold"
+            android:gravity="center"
+            android:text="Finora"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvtglogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/pjkt_reg"
+            android:gravity="center"
+            android:text="Aplikasi pencatat keuangan anda"
+            android:textColor="#DCE8FF"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarHorizontal"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="150dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="24dp"
+            android:max="100"
+            android:progress="40"
+            android:progressDrawable="@drawable/progress_bar_gradient" />
+
+    </LinearLayout>
+</RelativeLayout>
