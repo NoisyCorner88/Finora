@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/pjkt_ebold"
+                android:text="Edit Kartu"
+                android:textColor="#182033"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btnCloseDialog"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_circle_blue_light"
+                android:fontFamily="@font/pjkt_ebold"
+                android:gravity="center"
+                android:text="&#10005;"
+                android:textColor="#1555E8"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <!-- Pratinjau kartu -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:id="@+id/dialogCardPreviewBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pjkt_ebold"
+                    android:text="&#9672;  FINORA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/dialogCardTypeBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_card_badge"
+                    android:fontFamily="@font/pjkt_ebold"
+                    android:paddingStart="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/dialogCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/pjkt_ebold"
+                    android:maxLines="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/dialogLabelSaldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/dialogCardBalance"
+                    android:fontFamily="@font/pjkt_reg"
+                    android:text="SALDO"
+                    android:textColor="#E6FFFFFF"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/dialogCardBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/pjkt_ebold"
+                    android:maxLines="1"
+                    android:maxWidth="170dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/dialogBankName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/pjkt_ebold"
+                    android:maxLines="1"
+                    android:maxWidth="110dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Nama -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/pjkt_reg"
+            android:text="Nama Bank / E-Wallet"
+            android:textColor="#667085"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/etDialogBankName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_input_field"
+            android:fontFamily="@font/pjkt_ebold"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="#182033"
+            android:textSize="13sp" />
+
+        <!-- Warna -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/pjkt_reg"
+            android:text="Warna Kartu"
+            android:textColor="#667085"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutColorPicker"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View android:id="@+id/colorBlue"   android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/colorOrange" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/colorGreen"  android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/colorPurple" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/colorPink"   android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/colorDark"   android:layout_width="36dp" android:layout_height="36dp" />
+        </LinearLayout>
+
+        <!-- Saldo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pjkt_reg"
+            android:text="Saldo saat ini (Rp)"
+            android:textColor="#667085"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/etDialogBalance"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_input_field"
+            android:fontFamily="@font/pjkt_ebold"
+            android:importantForAutofill="no"
+            android:inputType="numberSigned"
+            android:maxLength="16"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="#182033"
+            android:textSize="13sp" />
+
+        <!-- 3 digit -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/pjkt_reg"
+            android:text="3 Digit Terakhir No. Rekening (opsional)"
+            android:textColor="#667085"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/etDialogCardLastDigits"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_input_field"
+            android:fontFamily="@font/pjkt_ebold"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="#182033"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/pjkt_reg"
+            android:text="Hanya 3 digit terakhir yang disimpan demi keamanan"
+            android:textColor="#94A3B8"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnSaveCardChanges"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_chip_selected"
+            android:fontFamily="@font/pjkt_ebold"
+            android:text="Simpan Perubahan"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/btnDeleteCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pjkt_ebold"
+            android:padding="10dp"
+            android:text="Hapus Kartu"
+            android:textColor="#FF253B"
+            android:textSize="12sp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

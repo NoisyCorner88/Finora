@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_input_field"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Number badge -->
+    <TextView
+        android:id="@+id/tvItemIndex"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/bg_circle_blue_light"
+        android:fontFamily="@font/pjkt_ebold"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#1555E8"
+        android:textSize="12sp" />
+
+    <!-- Name and Qty -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/pjkt_ebold"
+            android:maxLines="1"
+            android:text="Nama Barang"
+            android:textColor="#182033"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvItemQtyPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/pjkt_reg"
+            android:text="1 pcs × Rp 0"
+            android:textColor="#667085"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Total price -->
+    <TextView
+        android:id="@+id/tvItemTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/pjkt_ebold"
+        android:text="Rp 0"
+        android:textColor="#182033"
+        android:textSize="13sp" />
+
+    <!-- Delete button -->
+    <ImageView
+        android:id="@+id/btnDeleteItem"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Hapus item"
+        android:padding="6dp"
+        android:src="@drawable/ic_trash" />
+</LinearLayout>

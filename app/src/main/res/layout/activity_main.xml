@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgall">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_bottom_nav"
+        android:elevation="14dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <LinearLayout
+            android:id="@+id/navHome"
+            style="@style/BottomNavItem"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iconHome"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_homebb"
+                android:contentDescription="Beranda"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/labelHome"
+                style="@style/BottomNavLabel"
+                android:text="Beranda"
+                android:textColor="#737686" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navStats"
+            style="@style/BottomNavItem"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iconSats"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_stats"
+                android:contentDescription="Statistik"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/labelStats"
+                style="@style/BottomNavLabel"
+                android:text="Statistik"
+                android:textColor="#737686" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/navCamera"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_camera_button"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iconCam"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_camfix"
+                android:contentDescription="Kamera" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/navActivity"
+            style="@style/BottomNavItem"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iconActivity"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_activity"
+                android:contentDescription="Aktivitas"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/labelActivity"
+                style="@style/BottomNavLabel"
+                android:text="Aktivitas"
+                android:textColor="#737686" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navProfil"
+            style="@style/BottomNavItem"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iconProfil"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_prof"
+                android:contentDescription="Profil"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/labelProfil"
+                style="@style/BottomNavLabel"
+                android:text="Profil"
+                android:textColor="#737686" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
